@@ -37,35 +37,10 @@ const togCart = function () {
   }
 };
 
-/*var ignoreClickOnMeElement = document.getElementsByClassName(".container-cart");
-
 document.addEventListener("click", function (event) {
-  var isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
-  if (!isClickInsideElement) {
-    toggleCart.classList.add("hidden");
-  }
+  if (event.target.closest(".shopping-cart-lightbox, .cart-indicator")) return;
+  toggleCart.classList.add("hidden");
 });
-*/
-/*
-function testThis() {
-  window.addEventListener("click", function(e)) {
-    if (this.document.querySelector(".shopping-cart-lightbox").contains(e.target)) {
-      console.log("clicked");
-    } else {
-      console.log("outside");
-      toggleCart.classList.add("hidden"), overlay.classList.add("hidden");
-    }
-  }
-}
-*/
-function testThis() {
-  window.addEventListener("click", function(e)) {
-    document.querySelector(".shopping-cart-lightbox").contains(e.target) {
-      console.log("clicked");
-    }
-
-  }
-}
 
 cart.addEventListener("click", togCart);
 
@@ -120,6 +95,7 @@ function imageLeft() {
 
 function imageRight() {
   setGalleryIndex(galleryIndex + 1);
+  console.log(galleryIndex);
   showGallery(galleryIndex);
 }
 
