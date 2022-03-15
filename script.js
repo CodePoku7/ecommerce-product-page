@@ -17,7 +17,7 @@ const overlay = document.querySelector(".overlay");
 const closeLightBox = document.querySelector(".close-preview");
 const btnLeft = document.querySelector(".btn-preview--left");
 const btnRight = document.querySelector(".btn-preview--right");
-
+const lightBoxThumb = document.querySelector(".lighbox-thumb");
 const btnPlus = document.querySelector(".btn--plus");
 const btnMinus = document.querySelector(".btn--minus");
 let counter = document.querySelector(".counter-number");
@@ -84,8 +84,10 @@ lightboxProductImgThumb.forEach((img, i) => {
 });
 
 function lightboxImgChange(e) {
+  console.log(galleryIndex);
   lightboxProductImg.src = e.target.src;
   setGalleryIndex(Number(e.target.dataset.id));
+  console.log(galleryIndex);
 }
 
 function imageLeft() {
@@ -95,7 +97,6 @@ function imageLeft() {
 
 function imageRight() {
   setGalleryIndex(galleryIndex + 1);
-  console.log(galleryIndex);
   showGallery(galleryIndex);
 }
 
