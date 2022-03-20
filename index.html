@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="queries.css" />
 
     <title>Frontend Mentor | E-commerce product page</title>
 
@@ -37,6 +38,22 @@
   </head>
   <body>
     <header class="header">
+      <button class="btn-mobile-nav">
+        <a href="#">
+          <img
+            class="mobile-icon"
+            name="menu-open"
+            src="images/icon-menu.svg"
+          />
+        </a>
+        <a href="#">
+          <img
+            class="mobile-icon"
+            name="menu-close"
+            src="images/icon-close.svg"
+          />
+        </a>
+      </button>
       <a href="#">
         <img class="logo" alt="Sneaker Company Logo" src="images/logo.svg" />
       </a>
@@ -49,6 +66,7 @@
           <li><a class="main-nav-link" href="#">Contact</a></li>
         </ul>
       </nav>
+
       <div class="login-container">
         <div class="cart-indicator">
           <a href="#">
@@ -98,6 +116,12 @@
     </header>
     <main>
       <section class="section-main">
+        <button class="btn-arrow btn-arrow--right">
+          <img src="images/icon-next.svg" />
+        </button>
+        <button class="btn-arrow btn-arrow--left">
+          <img src="images/icon-previous.svg" />
+        </button>
         <div class="main-product">
           <div class="main-product-image">
             <img
@@ -122,7 +146,7 @@
                   alt="Thumbnail 2"
                 />
               </div>
-              <div class="image-container">
+              <div class="image-container active">
                 <img
                   class="product-img-thumb"
                   src="images/fullimages/image-product-3.jpg"

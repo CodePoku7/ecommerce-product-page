@@ -13,12 +13,14 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
     font-family: "Kumbh Sans", sans-serif;
     line-height: 1
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 
@@ -28,10 +30,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     max-width: 110rem;
+    height: 8.3rem;
     position: relative;
     
     margin: 0 auto;
     margin-bottom: 9rem;
+    padding: 0 2rem;
     /*height: 11.2rem;*/
     border-bottom: 1px solid hsl(220, 14%, 75%);
     
@@ -41,9 +45,32 @@ body {
 .logo {
 }
 
+/***************************************/
+/* MOBILE NAV */
+/***************************************/
+
+.btn-mobile-nav {
+    margin-right: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display:none;
+
+}
+
+.mobile-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.mobile-icon[name="menu-close"] {
+    display: none;
+}
+
+
 
 /***************************************/
-/*NAVIGATION*/
+/* NAVIGATION */
 /***************************************/
 
 
@@ -97,12 +124,16 @@ body {
     margin-left: auto;
     
 
+    
+    
+
 }
 
 .login-icon {
     width: 5rem;
     height: 5rem;
     margin-left: 3rem;
+    margin-right: 2rem;
     border: 2px solid transparent;
     
 }
@@ -128,10 +159,10 @@ body {
 
 .container-cart {
     display: inline-block;
-    max-width: 110rem;   
+       
     position:absolute;
     top: 70px;
-    margin-right: 0px;
+    
     right: 0%;
     z-index:9999;
     
@@ -200,6 +231,14 @@ body {
     font-size: 1.4rem;
     font-weight: 400;
     color: hsl(219, 9%, 45%);
+
+}
+
+.cart-item-count {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: hsl(219, 9%, 45%);
+    margin-right: 0.6rem;
 
 }
 
@@ -347,20 +386,9 @@ body {
 
 
 .image-preview-container .active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 1.4rem;
-    width: 9.2rem;
-    height: 9.2rem;
     border: 0.2rem solid hsl(26, 100%, 55%);
-    
-    
-    
-    
-    
-    
-}
+    }
 
 .lightbox-thumb.active {
     opacity: 0.5;
@@ -455,18 +483,19 @@ body {
 /***************************************/
 
 .section-main {
-    ;
 }
 .main-product {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
     max-width: 102rem;
-    margin: 0 auto;
+    margin: auto;
+    padding: 0rem 1rem;
     gap: 5rem;
 
 }
 .main-product-image {
+    
     
     
 
@@ -482,18 +511,19 @@ body {
     display: flex;
     justify-content:space-between;
     position: relative;
+    height: 9.2rem;
+    
 }
 
 
 
 .main-product-image-gallery img {
     width: 9.2rem;
-    height: 9.2rem;
+    height: auto;
     border-radius: 1.2rem;
     cursor: pointer;
-    border: 0.2rem solid transparent;
+    outline: 0.2rem solid transparent;
     
-
 }
 
 
@@ -503,23 +533,30 @@ body {
 
 .main-product-image-gallery img:hover,
 .main-product-image-gallery img:active {
-    border: 0.2rem solid hsl(26, 100%, 55%);
     opacity: 0.5;
-    
-    
-
 }
+
+
+
+
 
 .image-container:hover,
 .image-container:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.2rem solid transparent;
+    
     border-radius: 1.2rem;
     width: 9.2rem;
     height: 9.2rem;
-    border: 0.2rem solid hsl(26, 100%, 55%)
+    
+    
+}
+
+.product-img-thumb.active {
+    outline: 0.2rem solid hsl(26, 100%, 55%);
+    opacity: 0.5;
+    border-radius: 1.2rem;
 }
 
 
@@ -529,6 +566,7 @@ body {
 
 
 .main-product-text-box {
+    
 
 }
 .subheading {
@@ -708,4 +746,31 @@ input::placeholder {
     width: 18px;
     margin-right: 1.2rem;
     color: #fff;
+}
+
+
+.btn-arrow {
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-arrow--right {
+    right: 0;
+    top: 50%;
+    transform:translate(-50%,-100%);
+}
+
+.btn-arrow--left {
+    left: 0;
+    top: 50%;
+    transform:translate(50%,-100%);
 }
