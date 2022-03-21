@@ -56,9 +56,21 @@ btnMinus.addEventListener("click", counterDecrease);
 btnLeft.addEventListener("click", imageLeft);
 btnRight.addEventListener("click", imageRight);
 
-/******** */
+/**************************/
+/* Mobile navigation */
+/**************************/
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+  overlay.classList.toggle("hidden");
+});
+
+/**************************/
 /* Main product gallery */
-/******** */
+/**************************/
 const productImg = document.getElementById("mainImg");
 const productImgThumb = document.querySelectorAll(".product-img-thumb");
 
@@ -148,7 +160,6 @@ function imageRight() {
 
 lightboxProductImgThumb.forEach((lightboxProductImgThumb) => {
   lightboxProductImgThumb.addEventListener("click", function () {
-    console.log("click");
     lightboxProductImgThumb.forEach((img) => {
       img.classList.remove("active");
     });

@@ -13,15 +13,13 @@
 /*************************************/
 
 @media (max-width: 64em) {
-  .container-cart {
+  .btn-arrow--right {
+    display: block;
   }
-}
+  .btn-arrow--left {
+    display: block;
+  }
 
-/*************************************/
-/* BELOW 960px */
-/*************************************/
-
-@media (max-width: 60em) {
   .header {
     margin-bottom: 0;
   }
@@ -80,6 +78,7 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    z-index: 998;
   }
 
   .nav-open .main-nav {
@@ -91,6 +90,7 @@
 
   .nav-open .mobile-icon[name="menu-close"] {
     display: block;
+    z-index: 999;
   }
 
   .nav-open .mobile-icon[name="menu-open"] {
@@ -128,6 +128,7 @@
 
   .counter-number {
     width: 100%;
+    height: 5.6rem;
   }
 
   .btn--plus {

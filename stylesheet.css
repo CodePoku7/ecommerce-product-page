@@ -495,6 +495,7 @@ body {
 
 }
 .main-product-image {
+    position: relative;
     
     
     
@@ -552,6 +553,8 @@ body {
     
     
 }
+
+
 
 .product-img-thumb.active {
     outline: 0.2rem solid hsl(26, 100%, 55%);
@@ -767,10 +770,16 @@ input::placeholder {
     right: 0;
     top: 50%;
     transform:translate(-50%,-100%);
+    display: none;
 }
 
 .btn-arrow--left {
     left: 0;
     top: 50%;
     transform:translate(50%,-100%);
+    display: none;
+}
+
+.btn-arrow img:hover {
+    filter: invert(51%) sepia(95%) saturate(1289%) hue-rotate(347deg) brightness(101%) contrast(101%);
 }
